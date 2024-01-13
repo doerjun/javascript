@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head style="background-color: #414141;color:aliceblue;">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Api request</title>
+</head>
+<body>
+  
+  
+</body>
+<script>
+ // XMLHttpRequest is a mehtod from which you can send and receive data
+ const requestUrl='https://api.github.com/users/hiteshchoudhary'
+const xhr=new XMLHttpRequest()
+xhr.open('GET',requestUrl) //its just opened not called yet
+//console.log(xhr.readyState);
+//console.log(xhr.readyState);
+//console.log(xhr.readyState);
+xhr.onreadystatechange=function(){
+  console.log(xhr.readyState)
+  if(xhr.readyState===4){
+    const data=JSON.parse(this.responseText);//this means within this context of the function   //parse converts string into the json
+    console.log(data);
+    const image=document.createElement('img');
+    const paragraph=document.createElement('p');
+    image.src=data.avatar_url;
+    image.style.height='200px'
+    paragraph.innerHTML=`followers: ${data.followers}`;
+    
+    document.body.appendChild(image);
+    document.body.appendChild(paragraph);
+
+
+    console.log(typeof(data));
+    console.log(paragraph.innerHTML)
+  }
+}
+xhr.send();
+//const image=document.createElement('img');
+//const paragraph=document.createElement('paragraph');
+
+</script>
+</html>

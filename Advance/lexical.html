@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // function init(){
+    //   let name='mzl';
+    //   function displayName(){
+    //     console.log(name);
+    //   }
+    //   displayName();
+    // }
+    // init();
+    function outer(){
+      let user='abc'
+      function inner(value){
+        console.log(`${user} has ${value} ids`)
+      
+      function innerOne(id){
+        console.log(`${user} has ${value} ids for ${id}`)
+
+      function innerTow(){
+        console.log('this is lexical scoping ie. function inside the can get the parent function propeties accessed')
+      }
+      innerTow();
+      }
+      innerOne('government')
+    }
+      inner(4)
+
+    }
+    outer()
+  </script>
+  
+</body>
+</html>

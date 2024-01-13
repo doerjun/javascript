@@ -10,7 +10,16 @@ let isLoggein=true; //boolean
 
 
 //objects
-console.log(typeof('ktm'));
-console.log(typeof(age));
-console.log(typeof(null));
-console.log(typeof(undefined));
+//console.log(typeof('ktm'));
+//console.log(typeof(age));
+//console.log(typeof(null));
+//console.log(typeof(undefined));
+let score=33;
+//console.log(typeof(score))
+//'33'=>33
+//'33abc'=>NaN
+//true=>1
+//false=>0
+let isLoggedIn=undefined;
+let booleanIsLoggedIn=Boolean(isLoggedIn);
+//console.log(booleanIsLoggedIn);

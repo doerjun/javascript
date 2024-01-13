@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creating Document object model</title>
+</head>
+<body style="background-color: #212121;color:white;">
+  
+</body>
+<script>
+  const div=document.createElement('div')
+   div.className='main';
+   div.id=Math.round(Math.random()*10+1)
+   div.title='myTitle';
+   div.style.backgroundColor='red';
+   div.style.alignItems='center';
+   div.style.marginLeft='30px';
+   div.style.padding='10px';
+   
+   
+   //.createElement('<h1>Hello programmenr</h1>')
+   //div.appendChild(text1);
+   //div.appendChild(text)
+  
+  const div2=document.createElement('h1')
+  div2.className='heading';
+  div2.id=Math.round(Math.random()*10+1);
+  div2.style.backgroundColor='green';
+  div2.style.padding='10px';
+  const text2=document.createTextNode('this is serious programming bug i will solve this problem')
+  div2.appendChild(text2);
+  //document.body.appendChild(div2)
+  div.appendChild(div2)
+  const paragraph=document.createElement('p');
+  paragraph.className='para';
+  paragraph.style.backgroundColor='blue';
+  paragraph.style.padding='5px';
+  const text=document.createTextNode('I like to code in js')
+  paragraph.appendChild(text);
+  //const text=document.createTextNode('I like to code in js')
+
+  div.appendChild(paragraph);
+  document.body.appendChild(div);
+
+  const button=document.createElement('button');
+  button.className='btn';
+  button.id='button';
+  button.style.textAlign='center'
+  const submitButton=document.createTextNode('submit')
+  button.appendChild(submitButton);
+  div.appendChild(button)
+  console.log(button)
+  //console.log(div2)
+   
+
+ //  console.log(div);
+
+
+</script>
+</html>

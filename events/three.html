@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width, initial-scale=1.0">
+  <title>ASync function</title>
+</head>
+<body>
+  <h1>Chai aur javascript</h1>
+  <button id="start">start</button>
+  <button id="stop">Stop</button>
+  
+</body>
+<script>
+  
+  const sayDate=function(str){
+    console.log(str,'jun',Date.now())
+    
+  }
+  let intervalId;
+  //const intervalId=setInterval(sayDate,1000,'hi')
+  //clearInterval(intervalId)
+
+
+  document.querySelector('#start').addEventListener('click',function(){
+    intervalId=setInterval(sayDate,1000,'hi')
+    console.log('start');
+    })
+  document.querySelector('#stop').addEventListener('click',function(){
+     console.log('start stopping..');
+     //intervalId=setInterval(sayDate,1000,'hi')
+     clearInterval(intervalId);
+     console.log('interval stopped..')
+  })
+
+
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+  <button id="orange">orange</button>
+  <button id="red">red</button>
+  
+</body>
+<script>
+  // function makeFunc(){
+  //   const name='nodejs';
+  //   function displayName(){
+  //     console.log(name)   if you are returnning the function not only functioon its scopes is also returnde also lexical scope returned
+  //   }
+  //   return displayName
+  // }
+  // const myFunc=makeFunc();
+  // myFunc();
+  // 
+  function clickHandler(color){
+    //document.body.style.backgroundColor=`${color}`
+   return function(){
+      document.body.style.backgroundColor=`${color}`
+    }
+
+  }
+  //document.getElementById('orange').onclick=clickHandler;//you giving refs in this case not function
+  document.getElementById('orange').onclick=clickHandler('orange')
+  document.getElementById('green').onclick=clickHandler('green')
+
+
+
+</script>
+</html>
